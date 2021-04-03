@@ -1,0 +1,53 @@
+pwd: sirve para ver la direcion (carpeta) en que se encuentra actualmente
+cd: es para navegar por los archivos de Linux, este comando te pedira la ruta completa o el nombre de la direcion
+ * cd .. (con dos puntos) para ir un directorio hacia arriba
+ * cd para ir directamente a la carpeta de inicio
+ * cd - (con un menos) es para ir a la direccion anterior
+ls: se usa para ver el contenido de un directorio, por defecto, este comando mostrara el contenido de la direccion actual de trabajo
+ *ls -R tambien listara todos los archivos en los subdirectorios
+ *ls -a mostrara los archivos ocultos
+ *ls -al listara los archivos y directorios con informacion detallada como los permisos, el tamaño, el propietario, ect.
+cat se utliza para ver el contenido de un archivo asi: cat nombre del archivo
+ * cat > nombre de archivo sirve para crear un archivo nuevo
+ *cat nombrearchivo1 nombrearchivo2 > nombrearchivo3 esta line sirve para unir el archivo 1 y 2 y lo guerda la union el el archivo 3
+ *cat nombredearchivo | tr a-z A-Z > nombrearchivo.txt se usa para convertir un archivo a mayusculas o minusculas
+cp: se usa para copiar archivos del directorio actual a uno diferente. por ejemplo  cp escenario.jpg /home/nombredeusuario/Imagenes crearia una copia de escenario.jpg (desde la direccion actual) en el directorio de Imagenes
+mv: sirve para mover archivos, aunque tambien sirve para cambiar el nombre de los archivos
+ * los argumentos de mv son similares a los cp. se debe escribir mv, el nombre del archivo y el directorio de destino ejemplo mv nombrearchivo.txt /home/nombredeusuario/direcciondestino
+ * para cambiar el nombre de los archivos, el comando mv es asi: mv nombrearchivoviejo nombrearchivonuevo
+mkdir: se utiliuza para crear un directorio nuevo, ejemplo mkdir juegos, se creara el directorio juegos 
+ *para generar un nuevo directorio dentro de otro, se usa mkdir juegos/nuevoarchivo
+ *cuando se usa la opcion p (padres) se crea un directorio entre dos directorios existentes; ejemplo, mkdir -p juegos/2020/nuevoarchivo, se creara el archivo 2020
+rmdir: sirve para eliminar un directorios vacios.
+rm: se usa para eliminar directorios y su contenido. si solo quieres eliminar el directorio, como alternativa a rmdir se usa rm -r ; rm elimina todo y no se puede recuperar
+touch: es para crear un nuevo archivo en blanco ejemplo touch /home/nombredeusuario/Documentos/web.html se crea un archivo html con nombre web en el directorio Documentos
+locate: es para localizar un archivo
+ *locate -i es para hacer la busqueda del archivo sin que se distingan entre mayusculas y minusculas ejemplo: locate -i nombrearchivo
+ *para buscar  un archivo que tenga dos o mas palabras se utliza un asteriosco (*) ejemplo: locate -i escuela*notas, se buscara cualquier archivo que tenga la palabras escuela y notas
+find: tambien se utliza buscar, pero se pueden buscar archivos como directorios, la diferencia es que con find se ubican archivos que estan dentro de directorios
+ * ejemplo: find /home/ -name notas.txt se buscara un archivo llamado notas.txt dentro del directorio de inicio y sus subdirectorios
+ *para buscar archivos en el directorio actual, find . -name notas.txt
+ *para buscar directorios se  hace find / -type -name nombre
+wc: se utiliza para saber la cantidad de elemetos de un archivo asi wc nombrearchivo 
+grep: permite buscar a traves de todo el texto de un archivo una palabra o linea especifica asi  grep casa archivo1.txt o tambien pude ser  cat archivo1.txt | grep casa
+sudo: es la abreviatura de <<SuperUserDo>> el cual permite hacer tareas que requieren permisos administrativos o de raiz
+df: se usa para obtener informacion sobre el uso del espacio en el disco del sistema , que se muestra en porcentaje y KB. si se desea ver en megabytes se escribe df -m
+du -h: para verificar cuanto espacio ocupa un archivo o un directorio 
+head:se usa para ver las primera lineas de cualquier archivo de texto. De manera predeterminada se muestran las primeras 10 lineas; se puede ver el numero de lineas deseadas
+     utilizando head -n elnumerodelineasquesedesea nombrearchivo.txt
+tail: se similar a head pero en vez de mostrar las primera lines muestra las ultimas 10; tambien se puede ver las deseadas utilizando tail-n elnumerodelineasquesedesea nombrearchivo
+diff: este comando compara el contenido de dos archivos linea por linea, genera las lineas que no coinciden ejemplo: diff archivo1.txt archivo2.txt
+chown: permite cambiar o tranferir la propiedad de un archivo al nombre de usuario especificado, ejemplo chown usuario1 archivo.txt usuario2 archivo.txt
+ping: sirve para verificar el estado de conectividad a un servidor; ejemplo ping google.com con este se verificara si se puede conectar google y el tiempo que tarda
+wget: sirve para descargar archivos de internet asi: wget seguido del enlace de la descarga
+uname: imprimira informacion detallada sobre tu sistema Linux, como el nombre de la maquina, el sistema operativo, el nucleo, ect.
+top: muestra una lsita de los procesos en ejecucion y la cantidad de cpu que utiliza
+history: sirve para revisar los comandos que se ingresaron anteriormente.
+man: sirve para ver el instructivo de los otros comandos, es decir se puede ver el manual ejemplo: man tail se mostrara el manual para usar tail.
+echo: sirve para escribir dentro de un archivo ejemplos echo "hola" > nombrearchivo (con un solo > es para escribir en la primera linea)       
+      echo "hola" >> nombrearchivo ( con dos >> es para escribir en la linea siguiente)
+zip: para comprimir los archivos 
+unzip: para descomprimir los archivos guardados en un zip
+hostname:para conocer el nombre de tu host/red; al agregar -l al final se mostrara la direccion de el ip de tu red
+
+
