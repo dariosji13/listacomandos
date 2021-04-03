@@ -1,6 +1,6 @@
 git init: para crear un nuevo repositorio
 git add: con este se pasa el proyecto  del working directory al stagin area
-git statis: para ver en que estado se encuentra nuestro proyecto
+git status: para ver en que estado se encuentra nuestro proyecto
 git commit: para pasar los archivos al repositorio
 git push: para subirlo a un repositorio remoto
 git pull: para acceder a los cambios hechos en el proyecto
@@ -13,3 +13,7 @@ git branch nombre de la rama: para craer una rama
 git checkout -b nombre de la rama: crea una rama y se ubica en ella
 git checkout -d nombre de la rama: para elimar la rama
 git branch -- all: para ver todas las ramas incluidas las remotas
+git  diff: para ver la diferencia entre dos ramas ejemplo: git diff master ..experiment
+git tag: para gestionar etiquetas  a los proyectos 
+ * crear un nuevo tag en el commit actual git tag -a v1.4 -m "version 1.4"
+ *crear un nuevo tag en un commit pasado git tag -a v1.2 nombre del commit si lo tiene o si no el codigo que lo identifica
