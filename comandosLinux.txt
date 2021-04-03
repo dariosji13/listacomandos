@@ -20,6 +20,7 @@ mkdir: se utiliuza para crear un directorio nuevo, ejemplo mkdir juegos, se crea
  *cuando se usa la opcion p (padres) se crea un directorio entre dos directorios existentes; ejemplo, mkdir -p juegos/2020/nuevoarchivo, se creara el archivo 2020
 rmdir: sirve para eliminar un directorios vacios.
 rm: se usa para eliminar directorios y su contenido. si solo quieres eliminar el directorio, como alternativa a rmdir se usa rm -r ; rm elimina todo y no se puede recuperar
+ rm -rf nombre: elimina a la fuerza 
 touch: es para crear un nuevo archivo en blanco ejemplo touch /home/nombredeusuario/Documentos/web.html se crea un archivo html con nombre web en el directorio Documentos
 locate: es para localizar un archivo
  *locate -i es para hacer la busqueda del archivo sin que se distingan entre mayusculas y minusculas ejemplo: locate -i nombrearchivo
